@@ -115,8 +115,8 @@ if (agreementResults && agreementStatus && agreementToggle && agreementDirectory
 
             if (cityAgreements.length === 0) {
                 const message = city === 'barbacena'
-                    ? 'Não há convênios listados para esta cidade.'
-                    : `Nenhum registro de ${selectedFilters.category === 'all' ? 'convênio' : categoryLabels[selectedFilters.category]} listado para esta cidade.`;
+                    ? 'Ainda não há convênios cadastrados nesta cidade.'
+                    : `Ainda não há convênio de ${selectedFilters.category === 'all' ? 'outro tipo' : categoryLabels[selectedFilters.category]} cadastrado nesta cidade.`;
                 citySection.append(createTextElement('p', 'agreement-empty', message));
                 agreementResults.append(citySection);
                 return;
