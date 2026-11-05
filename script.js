@@ -115,8 +115,8 @@ if (agreementResults && agreementStatus && agreementToggle && agreementDirectory
 
             if (cityAgreements.length === 0) {
                 const message = city === 'barbacena'
-                    ? 'As imagens enviadas não trazem convênios identificados para esta cidade.'
-                    : `Nenhum registro de ${selectedFilters.category === 'all' ? 'convênio' : categoryLabels[selectedFilters.category]} desta cidade foi identificado nas imagens enviadas.`;
+                    ? 'Não há convênios listados para esta cidade.'
+                    : `Nenhum registro de ${selectedFilters.category === 'all' ? 'convênio' : categoryLabels[selectedFilters.category]} listado para esta cidade.`;
                 citySection.append(createTextElement('p', 'agreement-empty', message));
                 agreementResults.append(citySection);
                 return;
