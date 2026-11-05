@@ -601,8 +601,16 @@ textarea {
     font-weight: 800;
 }
 
+.price-prefix {
+    display: block;
+    margin-top: 1rem;
+    color: var(--muted);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
 .price-card h3 {
-    margin: 1rem 0 0.4rem;
+    margin: 0.1rem 0 0.4rem;
     font-size: 2.2rem;
     letter-spacing: -0.06em;
 }
