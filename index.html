@@ -15,7 +15,7 @@
             href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
             rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=3" />
+    <link rel="stylesheet" href="styles.css?v=4" />
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -167,21 +167,38 @@
     <section id="convenios" class="agreements section-spacing">
         <div class="container">
             <div class="section-heading">
-                <span class="section-tag">Descontos participativos</span>
-                <h2>Convênios e benefícios</h2>
-                <p>Descontos participativos disponíveis com:</p>
+                <span class="section-tag">Convênios participantes</span>
+                <h2>Encontre por cidade e tipo</h2>
+                <p>Selecione uma cidade e uma categoria para consultar os nomes, as especialidades e os endereços.</p>
             </div>
 
-            <ul class="agreement-list">
-                <li>Médicos</li>
-                <li>Fisioterapeutas</li>
-                <li>Dentistas</li>
-                <li>Clínicas médicas e de exames de imagem</li>
-            </ul>
+            <div class="agreement-filters">
+                <div class="agreement-filter-group" role="group" aria-labelledby="agreement-city-label">
+                    <h3 id="agreement-city-label">Cidade</h3>
+                    <div class="agreement-filter-options">
+                        <button class="agreement-filter is-active" type="button" data-agreement-city="all" aria-pressed="true">Todas</button>
+                        <button class="agreement-filter" type="button" data-agreement-city="santos-dumont" aria-pressed="false">Santos Dumont</button>
+                        <button class="agreement-filter" type="button" data-agreement-city="juiz-de-fora" aria-pressed="false">Juiz de Fora</button>
+                        <button class="agreement-filter" type="button" data-agreement-city="barbacena" aria-pressed="false">Barbacena</button>
+                    </div>
+                </div>
 
-            <p class="agreement-coverage">
-                Benefícios válidos para Santos Dumont, Juiz de Fora e Barbacena.
+                <div class="agreement-filter-group" role="group" aria-labelledby="agreement-category-label">
+                    <h3 id="agreement-category-label">Tipo de convênio</h3>
+                    <div class="agreement-filter-options">
+                        <button class="agreement-filter is-active" type="button" data-agreement-category="all" aria-pressed="true">Todos</button>
+                        <button class="agreement-filter" type="button" data-agreement-category="clinicas" aria-pressed="false">Médicos e clínicas</button>
+                        <button class="agreement-filter" type="button" data-agreement-category="dentistas" aria-pressed="false">Dentistas</button>
+                        <button class="agreement-filter" type="button" data-agreement-category="fisioterapia" aria-pressed="false">Fisioterapia</button>
+                    </div>
+                </div>
+            </div>
+
+            <p class="agreement-source-note">
+                Listagem transcrita das imagens enviadas. Elas não apresentam nomes, endereços ou especialidades de convênios de Barbacena.
             </p>
+            <p class="agreement-status" id="agreement-status" role="status" aria-live="polite"></p>
+            <div class="agreement-results" id="agreement-results" aria-live="polite"></div>
         </div>
     </section>
 
@@ -285,6 +302,6 @@
     </div>
 </footer>
 
-<script src="script.js?v=2"></script>
+<script src="script.js?v=3"></script>
 </body>
 </html>
