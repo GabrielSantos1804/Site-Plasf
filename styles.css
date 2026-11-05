@@ -464,14 +464,17 @@ textarea {
     color: var(--white);
 }
 
-.agreement-source-note {
-    margin: 0 0 1rem;
-    padding: 1rem 1.25rem;
-    border-left: 4px solid var(--green-700);
-    border-radius: 0 12px 12px 0;
-    background: var(--green-100);
-    color: var(--green-950);
-    font-weight: 700;
+.agreement-toggle {
+    border: 0;
+    cursor: pointer;
+}
+
+.agreement-directory {
+    margin-top: 1.5rem;
+}
+
+.agreement-directory[hidden] {
+    display: none;
 }
 
 .agreement-status {

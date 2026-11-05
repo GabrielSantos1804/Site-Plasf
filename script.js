@@ -33,8 +33,10 @@ if (navToggle && mainNav) {
 
 const agreementResults = document.getElementById('agreement-results');
 const agreementStatus = document.getElementById('agreement-status');
+const agreementToggle = document.getElementById('agreement-toggle');
+const agreementDirectory = document.getElementById('agreement-directory');
 
-if (agreementResults && agreementStatus) {
+if (agreementResults && agreementStatus && agreementToggle && agreementDirectory) {
     const agreements = [
         { city: 'santos-dumont', category: 'clinicas', name: 'Clínica Consumed', specialty: 'Consultas médicas', address: 'Rua Dr. Pedro de Almeida, 25 – Centro' },
         { city: 'santos-dumont', category: 'clinicas', name: 'Clínica Medimagem', specialty: 'Diagnósticos por imagem', address: 'Av. Getúlio Vargas, 635 – Centro' },
@@ -164,5 +166,14 @@ if (agreementResults && agreementStatus) {
         });
     });
 
-    renderAgreements();
+    agreementToggle.addEventListener('click', () => {
+        const isOpen = agreementToggle.getAttribute('aria-expanded') !== 'true';
+        agreementDirectory.hidden = !isOpen;
+        agreementToggle.setAttribute('aria-expanded', String(isOpen));
+        agreementToggle.textContent = isOpen ? 'Ocultar convênios' : 'Ver convênios';
+
+        if (isOpen && agreementResults.childElementCount === 0) {
+            renderAgreements();
+        }
+    });
 }
